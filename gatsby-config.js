@@ -5,6 +5,19 @@ module.exports = {
     description: 'A Gatsby.js Starter based on Strata by HTML5 UP',
   },
   plugins: [
+    {
+      resolve: `@conradlin/gatsby-source-notion-database`,
+      options: {
+        sourceConfig: [
+          {
+            name: 'posts',
+            table:
+              'https://www.notion.so/f1aca37400104e06a2423638e88bdd13?v=7c40ce84d4ed4bb28c7cab19b2f4481b',
+            cacheType: 'html',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
