@@ -7,6 +7,10 @@
 
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
 const path = require(`path`)
+exports.onCreateNode = async( {
+  node, actions
+})
+
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
